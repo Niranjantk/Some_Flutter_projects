@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #83797a;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Main-div{
+    background-color:#bbabac ;
+    height: 100vh;
+    width: 65%;
+}
+/* ============================================ */
+.Nav-bar{
+    display: flex;
+    margin: 30px 0px 0px 30px;
+}
+.nav-bar-logo img{
+    width: 100px;
+}
+.nav-bar-name{
+    
+}
