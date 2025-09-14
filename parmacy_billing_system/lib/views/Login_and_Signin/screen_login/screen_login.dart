@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:parmacy_billing_system/Login_and_Signin/Screen_login/elements/input_bk.dart';
+import 'package:parmacy_billing_system/shared/common_color.dart';
+import 'package:parmacy_billing_system/views/Login_and_Signin/screen_login/widgets/input_background.dart';
 
 class ScreenLogin extends StatelessWidget {
   const ScreenLogin({super.key});
@@ -7,7 +8,7 @@ class ScreenLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF904FFF),
+      backgroundColor: ConnonColors.backgroundColor,
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

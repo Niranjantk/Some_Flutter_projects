@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parmacy_billing_system/views/home/home.dart';
 
 //  SIGN IN TEXT=====================================================
 class SigninTextandinputs extends StatelessWidget {
@@ -25,6 +26,21 @@ class SigninTextandinputs extends StatelessWidget {
           ),
         ),
         Inputs(),
+        Padding(
+          padding: const EdgeInsets.only(right: 50),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  "Forgot Password",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ],
+          ),
+        ),
         CreateAccountButton(),
       ],
     );
@@ -44,9 +60,7 @@ class Inputs extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //FIRST
-            SizedBox(height: 20),
-            textstylised("Full Name"),
-            inputs('John Doe', false),
+
             //SECOND
             SizedBox(height: 20),
             textstylised("Email"),
@@ -55,7 +69,7 @@ class Inputs extends StatelessWidget {
             //THIRD
             SizedBox(height: 20),
             textstylised("Password"),
-            inputs('*****', true),
+            inputs('Enter you password', true),
             SizedBox(height: 30),
           ],
         ),
@@ -108,15 +122,17 @@ class CreateAccountButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 200,
       height: 40,
       child: ElevatedButton(
-        style: ButtonStyle(
-          
-        ),
-        onPressed: () {},
+        style: ButtonStyle(),
+        onPressed: () {
+          Navigator.of(context).pushAndRemoveUntil(
+            MaterialPageRoute(builder: (context) => HomeScreen()),
+            (route) => false,
+          );
+        },
         child: Text(
-          'SignIn',
+          'LogIn',
           style: TextStyle(
             fontSize: 27,
             fontFamily: 'jaro',
@@ -130,25 +146,3 @@ class CreateAccountButton extends StatelessWidget {
 }
 
 //THE ALREDY HAVE A ACCOUND OR GOOGLE =====================================================
-class AlredyGoogle extends StatelessWidget {
-  const AlredyGoogle({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text("Already have a account? Login IN"),
-        Divider(),
-        Text("OR"),
-        Divider(),
-        Container(
-          width: 200,
-          height: 50,
-          decoration: BoxDecoration(
-            //image and text
-          ),
-        ),
-      ],
-    );
-  }
-}

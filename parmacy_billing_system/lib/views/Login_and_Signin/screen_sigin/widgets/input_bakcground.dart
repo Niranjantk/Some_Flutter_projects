@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parmacy_billing_system/Login_and_Signin/Screen_login/elements/texts_inputs.dart';
+import 'package:parmacy_billing_system/views/Login_and_Signin/screen_sigin/widgets/texts_inputs.dart';
 
 class BackgroundAndTextInputs extends StatelessWidget {
   const BackgroundAndTextInputs({super.key});
